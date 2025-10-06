@@ -1,0 +1,45 @@
+{
+  "vidrios": [
+    {
+      "tipo": "Simple",
+      "descripcion": "Vidrio de una sola capa, económico y de uso común en interiores.",
+      "beneficios": ["Bajo costo", "Ligero", "Fácil instalación"]
+    },
+    {
+      "tipo": "Doble vidrio hermético (DVH)",
+      "descripcion": "Dos láminas de vidrio separadas por una cámara de aire que mejora el aislamiento térmico y acústico.",
+      "beneficios": ["Ahorro energético", "Aislamiento acústico", "Mayor seguridad"]
+    },
+    {
+      "tipo": "Laminado",
+      "descripcion": "Vidrio compuesto por dos o más láminas unidas por una capa plástica de alta resistencia.",
+      "beneficios": ["Alta seguridad", "Filtrado UV", "Mayor resistencia a impactos"]
+    },
+    {
+      "tipo": "Templado",
+      "descripcion": "Vidrio tratado térmicamente para aumentar su resistencia y seguridad.",
+      "beneficios": ["5 veces más resistente que el vidrio común", "Se fragmenta en piezas pequeñas", "Uso en puertas y barandas"]
+    }
+  ],
+  
+  "tiposApertura": [
+    {
+      "nombre": "Corrediza",
+      "descripcion": "Las hojas se deslizan horizontalmente sobre un riel.",
+      "usos": ["Ventanas amplias", "Puertas balcón"],
+      "ventajas": ["Ahorro de espacio", "Fácil manejo"]
+    },
+    {
+      "nombre": "Batiente",
+      "descripcion": "Las hojas giran sobre bisagras, abriéndose hacia adentro o hacia afuera.",
+      "usos": ["Ventanas clásicas", "Puertas de entrada"],
+      "ventajas": ["Apertura total", "Ventilación completa"]
+    },
+    {
+      "nombre": "Oscilobatiente",
+      "descripcion": "Permite abrir como batiente o inclinar la hoja para ventilación.",
+      "usos": ["Ventanas de dormitorios", "Oficinas"],
+      "ventajas": ["Versatilidad", "Seguridad"]
+    }
+  ]
+}

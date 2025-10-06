@@ -1,0 +1,513 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 1900px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "my-header"
+    "my-nav"
+    "my-main"
+    "my-footer";
+    grid-template-rows: 250px 50px 1fr 200px;
+}
+
+
+/***HEADER***/
+
+header {
+    position: sticky;  
+    top: 0;            
+    z-index: 1000; 
+}
+
+.div_img_cabecera{
+    grid-area: my-header;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+}
+
+.img_cabecera{
+    width: 100%;
+    height: 100%;
+}
+
+.img_logo{
+    z-index: 2;
+    left: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+/**** NAV *****/
+/*Estilo del "div" contenedor de todos los enlaces*/
+.cabecera_enlaces{
+    grid-area: my-nav;
+    width: 100%;        
+    height: 50px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    column-gap: 30px;
+    padding-left: 40px;
+    background-color: rgba(14, 14, 14, 0.95);
+    
+}
+
+/*Estilo del "div" del enlace del menú*/
+@font-face {
+    font-family: "Paytone One";
+    src: url(./Paytone_One/PaytoneOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./Montserrat/Montserrat-VariableFont_wght.ttf);
+} 
+
+/*DIV CONTENEDOR del ENLACE*/
+.menu {
+    height: 100%;
+    font-size: 25px;
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.enlaces,
+.enlace_actual {
+    display: flex;                
+    align-items: center;          
+    padding: 0 10px;              
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilo del ENLACE ACTUAL */
+.enlace_actual {
+    background-color: white;
+    color: black;
+}
+
+
+/***MAIN***/
+main{
+    grid-area: my-main;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    margin: 40px;
+}
+
+h2{
+    font-size: 30px;
+    font-family: "Paytone One", sans-serif;
+    padding-bottom: 40px;
+}
+
+h3{
+    font-size: 18px;
+    color:black;
+    font-family: "Paytone One", sans-serif;
+    padding-bottom: 20px;
+}
+
+p{
+    font-size: 25px;
+    color: black;
+    font-family: "Montserrat";
+}
+
+.section-index {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.section-index-img {
+    width: 800px;
+    height: 600px;
+}
+
+.efecto {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.efecto.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.section-json {
+    padding-top: 50px;
+    border-top: 5px solid grey;
+}
+
+.efecto-json {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.efecto-json.show {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.json-contenedor {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid grey;
+}
+
+.json-div {
+    width: 50%;
+    padding: 30px;
+    font-size: 25px;
+    font-family: "Montserrat";
+    line-height: 1.5;
+}
+
+.division {
+    border-right: 1px solid grey;
+}
+
+/*** PRODUCTOS ***/
+.div_galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.div_img {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.div_img img {
+    width: 550px;      
+    height: 550px;     
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.div_img img:hover {
+    transform: scale(1.05);
+}
+
+.span-img {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #333;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .div_galeria {
+        grid-template-columns: 1fr; /* en móvil, 1 columna */
+    }
+
+    .div_img img {
+        width: 100%;  /* ocupa todo el ancho disponible */
+        height: auto; /* mantiene proporción en móvil */
+    }
+}
+
+
+/*** PRESUPUESTO ***/
+
+/*Datos Personales*/
+.contenedor {
+    float: left;
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 67%;
+    margin-bottom: 40px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    font-family: "Paytone One", sans-serif;
+    font-size: 18px;
+}
+
+fieldset {
+    padding: 20px;
+    display: flex;
+    border: 2px solid;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-size: 25px;
+}
+
+.label-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label, span {
+    height: 30px;
+}
+
+.input-contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 25px;
+    width: 300px;
+}
+
+input{
+    border: solid 0.5px grey;
+    height: 30px;
+    padding-left: 10px;
+    font-size: medium;
+}
+
+.error-datos-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 25px;
+}
+
+.valido{
+    border-color: green
+}
+
+.invalido{
+    border-color: red;
+}
+
+.error{
+    color: red;
+}
+
+/*Presupuesto*/
+.presupuesto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#seleccion-producto {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+#añadir-al-carrito {
+    padding: 5px;
+    font-size: 15px;
+}
+
+.articulo-carrito {
+    display: flex;
+    gap: 5px;    
+}
+
+.eliminar-articulo {
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid black;
+    font-weight: 800;
+}
+
+.articulos-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100px;
+    height: auto;
+    border: 5px solid black;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: gray;
+    opacity: 0.8;
+}
+
+.descuento-extras {
+    display: flex;
+    gap: 30px;  
+}
+
+.check-contenedor{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-extra, .check  {
+    width: 17px;
+    height: 17px;
+}
+
+.total{
+    font-weight: 900 ;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    background-color: grey;
+    color: black;
+    border: 5px solid black;
+}
+
+.button-contenedor{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 25px;
+}
+
+.button-form{
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+
+/****CONTACTO****/
+.contenido{
+    height: auto;
+    width: 100%;
+    display: flex;
+    padding-bottom: 40px;
+}
+
+ul{
+    list-style-position: inside;
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgba(14, 14, 14, 0.775);
+}
+
+.texto_contacto{
+    font-size: 25px;
+    margin-right: 80px;
+    font-family: "Montserrat";
+}
+
+small a {
+    font-size: 20px;
+    text-decoration: none;
+    color: blue;
+}
+
+
+#map {
+    height: 600px;
+    width: 100%;
+    border: 1px solid grey;
+}
+
+
+/***FOOTER***/
+footer{
+    display: flex;
+    grid-area: my-footer;
+    background-color: rgba(14, 14, 14, 0.775);
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content:space-around;
+    max-height: 100%;
+}
+
+.contacto-footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    font-family: "Montserrat";
+    height: 100%;
+    justify-content: center;
+    margin-left: 40px;
+    width: auto;
+}
+
+footer div ul{
+    list-style-type: none;
+    color: white;
+}
+
+footer div ul a{
+    color: white;
+}
+
+a img {
+    width: 30px;
+    height: 30px; 
+    border-radius: 10px;
+    
+}
+
+.texto_footer_contenedor{
+    align-content: center;
+    height: 100%;
+}
+
+.texto_footer{
+    font-size: 40px;
+    color: white;
+}
+
+.redes_contenedor{
+    justify-content: center;
+    align-content: center;
+}
+.iconos {
+    margin-right: 15px;
+    transition: transform 0.2s ease;
+    width: 30px;
+    height: 30px;
+}
+
+.iconos_redes {
+    margin-right: 15px;
+    transition: transform 0.2s ease;
+    width: 50px;
+    height: 50px;
+}
+
+.iconos_redes:hover {
+    transform: scale(1.1);
+}
+
+.iconos:hover {
+    transform: scale(1.1); 
+}

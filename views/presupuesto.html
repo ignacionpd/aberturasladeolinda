@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aberturas La Deolinda</title>
+    <link rel="stylesheet" href=".././css/estilos.css">
+    <link rel="icon" href=".././images/LogoPNG.png" type="image/png">
+</head>
+<body>
+    <header>
+         <!--Imágen cabecera-->
+        <div class="div_img_cabecera">
+            <img class="img_logo" src=".././images/Logo.jpg" alt="aberturas la deolinda logo" width="960" height="960">
+            <img class="img_cabecera" src=".././images/header.jpg" alt="aberturas la deolinda" width="1024" height="220">
+        </div>
+
+
+        <!--Menú enlaces-->
+        <nav>
+            <div class="cabecera_enlaces">
+                <div class="menu">
+                   <a class="enlaces" href="./../index.html">Inicio</a>
+                </div>
+                <div class="menu">
+                    <a class="enlaces" href="./productos.html">Productos</a>
+                </div>
+                <div class="menu">
+                    <a class="enlace_actual" href="./presupuesto.html">Presupuesto</a>
+                </div>
+                <div class="menu">
+                    <a class="enlaces" href="./contacto.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>    
+        <div class="contenedor">
+
+            <form class="form" id="formulario" method="post" action="#">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div class="label-contenedor">
+                        <label for="nombre">Nombre:</label>
+                        <label for="apellidos">Apellidos:</label>
+                        <label for="telefono">Teléfono:</label>
+                        <label for="correo">E-mail:</label>
+                    </div>
+                    <div class="input-contenedor">
+                        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre">
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Escriba sus apellidos">
+                        <input type="tel" name="telefono" id="telefono" placeholder="Escriba su teléfono">
+                        <input type="text" name="correo" id="correo" placeholder="Escriba su correo electrónico">
+                    </div>
+                    <div class="error-datos-contenedor">
+                        <span class="error" id="nombreError"></span>
+                        <span class="error" id="apellidosError"></span>
+                        <span class="error" id="telefonoError"></span>
+                        <span class="error" id="correoError"></span>                            
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Presupuesto</legend>
+                    <div class="presupuesto">
+                        <div class="seleccion-producto-contenedor">
+                            <label for="seleccion-producto">Seleccioná un producto:</label>
+                            <select name="seleccion-producto" id="seleccion-producto" required>
+                                <option value="">---------- Selecciona un producto ----------</option>
+                                <option value="Ventana doble paño 150 x 150 con raja 50 x 150:400">Ventana doble paño 150 x 150 con raja 50 x 150 - 400€</option>
+                                <option value="Puerta de acero inyectada galvanizada blanca:1200">Puerta de acero inyectada galvanizada blanca - 1200€</option>
+                                <option value="Ventana 100x60cm con doble hojas corredizas:200">Ventana 100x60cm con doble hojas corredizas - 200€ </option>
+                                <option value="Ventana 100x60cm con doble hojas corredizas:300">Ventana 100x100cm con doble hojas corredizas - 300€ </option>
+                                <option value="Ventana 100x60cm con doble hojas móviles frontales:250">Ventana 100x100cm con doble hojas móviles frontales - 250€ </option>
+                                <option value="Doble puerta ventana 120x200cm con cristales:700">Doble puerta ventana 120x200cm con cristales - 700€ </option>
+                            </select>
+                            <button type="button" id="añadir-al-carrito">Añadir al carrito</button>
+                        </div>
+                        
+                        <div class="contenedor-carrito">
+                            <span>Carrito:</span>
+                            <div class="articulos-carrito" id="articulos-carrito"></div>
+                        </div>
+
+                        <div class="descuento-extras">
+                            <span>Extras:</span>
+                            <div class="check-contenedor">
+                                <input type="checkbox" class="checkbox-extra" value="Embalaje especial:10">
+                                Embalaje especial - 10€
+                            </div>
+                            <div class="check-contenedor">
+                                <input type="checkbox" class="checkbox-extra" value="Entrega hasta una 3º planta:20">
+                                Entrega hasta una 2da planta - 20€
+                            </div>
+                            <div class="check-contenedor">
+                                <input type="checkbox" class="checkbox-extra" value="Entrega rápida:35">
+                                Entrega de 3ra a 5ta planta - 35€
+                            </div>
+                        </div>
+
+                        <div class="descuento-extras">
+                            <span>Plazos de entrega (días):</span>
+                            <div class="check-contenedor">
+                                <input type="radio" class="check" name="descuento" value="0" required>
+                                15 (Sin descuento)
+                            </div>
+                            <div class="check-contenedor">
+                                <input type="radio" class="check" name="descuento" value="0.1">
+                                30 (10% descuento)
+                            </div>
+                            <div class="check-contenedor">
+                                <input type="radio" class="check" name="descuento" value="0.2">
+                                45 (20% descuento)
+                            </div>
+                        </div>
+
+                        <p class="total" id="total-final">Total final: 0€</p>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Aceptación de condiciones de privacidad y envío</legend>
+                    <span class="check-contenedor">
+                        <input type="checkbox" name="condiciones" id="condiciones" class="check">                       
+                        <span>Acepto las condiciones de privacidad y envío del presupuesto</span>                            
+                        <span class="error" id="condicionesError"></span>
+                    </span>    
+                </fieldset>
+
+                <div class="button-contenedor">
+                    <button type="reset" class="button-form">Resetear formulario</button>
+                    <button type="submit" class="button-form">Solicitar presupuesto</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <img src=".././images/Logo.jpg" alt="aberturas la deolinda" width="200" height="200">
+        <div class="contacto-footer">
+            <ul>
+                <li><a href="https://maps.app.goo.gl/EmYWoP4i2GhBsNLJ8" target="_blank"><img class="iconos" src="./../images/ubicacion.png" alt="ubicación aberturas la deolinda" width="225" height="225">C/ Santa Cecilia, 19, Alicante (CP 03007)</a></li>
+                <li><a href="mailto:aberturasdeolinda@gmail.com"><img class="iconos" src=".././images/correo.png" alt="correo aberturas la deolinda" width="94" height="32">aberturasdeolinda@gmail.com</a></li>
+                <li><img class="iconos" src=".././images/telefono.png" alt="teléfono la deolinda" width="30" height="30">654655664</li>
+            </ul>                
+        </div>
+        <div class="texto_footer_contenedor">
+            <p class="texto_footer">Aberturas La Deolinda</p>
+        </div>
+        <div class="redes_contenedor">
+            <a href="https://www.instagram.com" target="_blank"><img class="iconos_redes" src="./../images/IG.png" alt="Instagram" width="70" height="56"></a>
+            <a href="https://www.facebook.com/people/Aberturas-La-Deolinda/61557149286943/" target="_blank"><img class="iconos_redes" src="./../images/fb.png" alt="Facebook" width="70" height="56"></a>
+        </div>
+    </footer>
+    
+    <script src=".././js/script.js"></script>
+</body>
+</html>

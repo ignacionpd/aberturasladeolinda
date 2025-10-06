@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aberturas La Deolinda</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+    <link rel="stylesheet" href=".././css/estilos.css">
+    <link rel="icon" href=".././images/LogoPNG.png" type="image/png">
+</head>
+<body>
+    <header>
+         <!--Imágen cabecera-->
+        <div class="div_img_cabecera">
+            <img class="img_logo" src=".././images/Logo.jpg" alt="aberturas la deolinda logo" width="960" height="960">
+            <img class="img_cabecera" src=".././images/header.jpg" alt="aberturas la deolinda" width="1024" height="220">
+        </div>
+
+        <!--Menú enlaces-->
+        <nav>
+            <div class="cabecera_enlaces">
+                <div class="menu">
+                    <a class="enlaces" href="./../index.html">Inicio</a>
+                </div>
+                <div class="menu">
+                    <a class="enlaces" href="./productos.html">Productos</a>
+                </div>
+                <div class="menu">
+                    <a class="enlaces" href="./presupuesto.html">Presupuesto</a>
+                </div>
+                <div class="menu">
+                    <a class="enlace_actual" href="./contacto.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contacto</h2>
+            
+            <div class="contenido">
+                <ul class="texto_contacto">
+                        <li>Dirección: <a href="https://maps.app.goo.gl/EmYWoP4i2GhBsNLJ8" target="_blank">C/ Santa Cecilia, 19, Alicante (CP 03007)</a></li>
+                        <li>E-mail: <a href="mailto:aberturasdeolinda@gmail.com">aberturasdeolinda@gmail.com</a></li>
+                        <li>Móvil: 654655664</li>
+                </ul>
+            </div>
+
+            <!--Div Mapa OpenStreetMap-->
+            <div id="map"></div>
+        </section>
+    </main>
+    <footer>
+        <img src=".././images/Logo.jpg" alt="aberturas la deolinda" width="200" height="200">
+        <div class="contacto-footer">
+            <ul>
+                <li><a href="https://maps.app.goo.gl/EmYWoP4i2GhBsNLJ8" target="_blank"><img class="iconos" src="./../images/ubicacion.png" alt="ubicación aberturas la deolinda" width="225" height="225">C/ Santa Cecilia, 19, Alicante (CP 03007)</a></li>
+                <li><a href="mailto:aberturasdeolinda@gmail.com"><img class="iconos" src=".././images/correo.png" alt="correo aberturas la deolinda" width="94" height="32">aberturasdeolinda@gmail.com</a></li>
+                <li><img class="iconos" src=".././images/telefono.png" alt="teléfono la duolinda" width="30" height="30">654655664</li>
+            </ul>                
+        </div>
+        <div class="texto_footer_contenedor">
+            <p class="texto_footer">Aberturas La Deolinda</p>
+        </div>
+        <div class="redes_contenedor">
+            <a href="https://www.instagram.com" target="_blank"><img class="iconos_redes" src="./../images/IG.png" alt="Instagram" width="70" height="56"></a>
+            <a href="https://www.facebook.com/people/Aberturas-La-Deolinda/61557149286943/" target="_blank"><img class="iconos_redes" src="./../images/fb.png" alt="Facebook" width="70" height="56"></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src=".././js/mapa.js"></script>
+</body>
+</html>
